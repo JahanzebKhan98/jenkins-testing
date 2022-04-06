@@ -4,6 +4,6 @@ node {
         
         echo "hello world"
  
-        sh "main.py"
+        sh "./main.py"
     }
 }
