@@ -1,6 +1,8 @@
 node {
     stage('cloning git repo') {
         git branch: 'main', url:'https://github.com/JahanzebKhan98/jenkins-testing'
+        
+        echo "hello world"
  
         sh "main.py"
     }
