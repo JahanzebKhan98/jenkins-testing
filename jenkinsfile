@@ -2,6 +2,8 @@ node {
 
     args '-u root:root'
     stage('cloning git repo') {
+        sh 'mkdir -p foo'
+        sh 'cd foo'
         git branch: 'main', url:'https://github.com/JahanzebKhan98/jenkins-testing'
         
         echo "hello world"
