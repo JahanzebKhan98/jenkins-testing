@@ -1,10 +1,27 @@
 node {
-
+  agent { 
+    
+    docker { 
+    
+    image 'python:3.6.4'
     args '-u root:root'
+    
+    
+    } 
+
+
+
     stage('cloning git repo') {
+        git branch: 'main', url:'https://github.com/JahanzebKhan98/jenkins-testing'
         sh 'mkdir -p foo'
         sh 'cd foo'
-        git branch: 'main', url:'https://github.com/JahanzebKhan98/jenkins-testing'
+        
+    }
+    
+    
+        stage('Build') {
+       
+
         
         echo "hello world"
  
