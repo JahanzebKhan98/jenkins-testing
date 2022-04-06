@@ -17,6 +17,8 @@ node {
 
         
         echo "hello world"
+        
+         args '-u root:root'
  
         sh './main.py'
     }
