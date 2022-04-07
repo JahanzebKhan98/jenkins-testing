@@ -1,25 +1,4 @@
 node {
-
-
-
-
-    stage('cloning git repo') {
-        git branch: 'main', url:'https://github.com/JahanzebKhan98/jenkins-testing'
-        echo "Creating Directory"
-        sh 'mkdir -p foo'
-        sh 'cd foo'
-        
+    stage('test') {
+        echo 'hello'
     }
-    
-    
-        stage('Build') {
-       
-
-        
-        echo "hello world"
-        
-         args '-u root:root'
- 
-        sh './main.py'
-    }
-}
