@@ -1,7 +1,13 @@
 node {
-    stage('cloning git repo') {
-     
-        sh "chmod +x -R ./jenkins"
-        sh "./main.py"
+    stage('Example') {
+    
+        echo "Hello jk"
+        try {
+            sh 'main.py'
+        }
+        catch (exc) {
+            echo 'Something failed, in catch command!'
+            throw
+        }
     }
 }
