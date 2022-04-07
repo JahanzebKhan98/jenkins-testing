@@ -3,6 +3,10 @@ node {
     
         docker.image('python:3.6.4').inside {
         
+        
+            sh 'mkdir -p foo'
+            sh 'cd foo'
+        
             pip install --upgrade pip
             sh 'pip install requests'
            
