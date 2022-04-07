@@ -1,6 +1,9 @@
 node {           
     stage('Testing') { 
         docker.image('python:3.6.4').inside {
+            sh 'pip install requests'
+            sh 'pip install bs4'
+
             sh 'python ./main.py'
     }
 }
