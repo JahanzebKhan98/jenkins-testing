@@ -7,7 +7,7 @@ node {
         }
         catch (exc) {
             echo 'Something failed, in catch command!'
-            throw
+            
         }
     }
 }
