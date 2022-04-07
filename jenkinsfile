@@ -7,7 +7,7 @@ node {
             sh 'mkdir -p foo'
             sh 'cd foo'
         
-            pip install --upgrade pip
+            sh 'pip install --upgrade pip'
             sh 'pip install requests'
            
 
