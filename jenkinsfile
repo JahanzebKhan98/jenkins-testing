@@ -1,7 +1,7 @@
 node {           
     stage('Testing') { 
         docker.image('python:3.6.4').inside {
-            sh 'python main.py'
+            sh 'python ./main.py'
     }
 }
 
