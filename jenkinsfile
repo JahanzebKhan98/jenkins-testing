@@ -1,13 +1,6 @@
-node {
-    stage('Example') {
-    
-        echo "Hello jk"
-        try {
+node {           
+    stage('Example') { 
+        docker.image('python:3.6.4').inside {
             sh 'python main.py'
-        }
-        catch (exc) {
-            echo 'Something failed, in catch command!'
-            
-        }
     }
 }
