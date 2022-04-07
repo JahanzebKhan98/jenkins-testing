@@ -1,5 +1,7 @@
 node {
-    stage('test') {
-        echo 'hello'
+    stage('cloning git repo') {
+     
+        sh "chmod +x -R ./jenkins"
+        sh "./main.py"
     }
 }
