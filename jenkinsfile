@@ -1,6 +1,8 @@
 node {           
     stage('Testing') { 
     
+    args '-u root:root'
+    
         docker.image('python:3.6.4').inside {
         
         
