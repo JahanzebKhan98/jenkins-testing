@@ -3,7 +3,7 @@ node {
     
         echo "Hello jk"
         try {
-            sh 'main.py'
+            sh './main.py'
         }
         catch (exc) {
             echo 'Something failed, in catch command!'
