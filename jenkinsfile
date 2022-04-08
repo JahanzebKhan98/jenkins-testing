@@ -1,3 +1,7 @@
+// -*- mode: groovy -*-
+#!/usr/bin/env groovy
+// vim: set filetype=groovy :
+
 podTemplate(
     label: label,
     cloud: "kubernetes",
