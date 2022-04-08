@@ -2,6 +2,8 @@
 
 // vim: set filetype=groovy :
 
+import groovy.json.JsonOutput
+
 podTemplate(
     label: label,
     cloud: "kubernetes",
