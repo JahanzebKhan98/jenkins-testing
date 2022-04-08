@@ -1,20 +1,36 @@
-node {           
-    stage('Testing') { 
-    
-    args '-u root:root'
-    
-        docker.image('python:3.6.4').inside {
-        
-        
-            sh 'mkdir -p foo'
-            sh 'cd foo'
-        
-            sh 'pip install --upgrade pip'
-            sh 'pip install requests'
-           
+podTemplate(
+    label: label,
+    cloud: "kubernetes",
+    nodeUsageMode: "EXCLUSIVE",
+    containers: [
+        containerTemplate(
+            name: "python",
+            image: 'python:3.8.2-slim-buster',
+            ttyEnabled: true,
+            privileged: true,
+            stdin: true,
+        ),
 
-            sh 'python ./main.py'
+    ],
+) 
+
+{
+    node(label) {
+
+        stage('Checkout SCM') {
+            echo "Git Cloned"
+        }
+
+        stage("Install pre-req") {
+            container("python"){
+                sh 'pip install --upgrade pip'
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
+        stage("Build") {
+            sh 'python pintrest_scrapper.py'
+        }
+
     }
-}
-
 }
