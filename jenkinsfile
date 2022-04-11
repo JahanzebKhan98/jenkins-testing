@@ -1,6 +1,9 @@
 // -*- mode: groovy -*-
 // vim: set filetype=groovy :
-
+def app_name = "package-management-service"
+def remoteUrl = "git@@bitbucket.org/sparkcognition/operational-model-service.git"
+def label = "jenkins-agent-${UUID.randomUUID().toString()}"
+def containerName = "build-container-${UUID.randomUUID().toString()}"
 
 
 import groovy.json.JsonOutput
