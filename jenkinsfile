@@ -9,9 +9,9 @@ def remoteUrl = "https://github.com/JahanzebKhan98/jenkins-testing.git"
 import groovy.json.JsonOutput
 
 podTemplate(
-    label: label,
-    cloud: "kubernetes",
-    nodeUsageMode: "EXCLUSIVE",
+//     label: label,
+//     cloud: "kubernetes",
+//     nodeUsageMode: "EXCLUSIVE",
     containers: [
         containerTemplate(
             name: "python",
