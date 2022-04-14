@@ -9,7 +9,6 @@ podTemplate(
             image: 'python:3.8.2-slim-buster',
             ttyEnabled: true,
             privileged: true,
-            stdin: true,
         ),
 
     ],
