@@ -15,12 +15,12 @@ podTemplate(
             image: 'python:3.8.2-slim-buster',
             ttyEnabled: true,
             privileged: true,
+            stdin: true,
         ),
 
     ],
-) 
-
-{ timeout(time: 2, unit: 'MINUTES') { 
+) {
+  timeout(time: 2, unit: 'MINUTES') { 
     node(label){
 
         stage('Checkout SCM') {
