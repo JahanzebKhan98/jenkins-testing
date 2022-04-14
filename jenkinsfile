@@ -1,17 +1,8 @@
-// -*- mode: groovy -*-
-// vim: set filetype=groovy :
-def app_name = "package-management-service"
-def remoteUrl = "https://github.com/JahanzebKhan98/jenkins-testing.git"
-def label = "jenkins-agent-${UUID.randomUUID().toString()}"
-def containerName = "build-container-${UUID.randomUUID().toString()}"
-
 
 import groovy.json.JsonOutput
 
 podTemplate(
-//     label: label,
-//     cloud: "kubernetes",
-//     nodeUsageMode: "EXCLUSIVE",
+
     containers: [
         containerTemplate(
             name: "python",
