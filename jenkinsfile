@@ -3,6 +3,10 @@ import groovy.json.JsonOutput
 
 podTemplate(
 
+    label: label, 
+    cloud: "kubernetes",
+    nodeUsageMode: "EXCLUSIVE",
+
     containers: [
         containerTemplate(
             name: "python",
