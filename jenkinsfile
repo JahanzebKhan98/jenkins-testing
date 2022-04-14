@@ -31,9 +31,10 @@ podTemplate(
         stage("Build") {
             container("python"){
             sh 'python pintrest_scrapper.py'
-        }
-        }
+                }
+            }
 
+        }
     }
 }
 }
