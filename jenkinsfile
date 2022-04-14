@@ -20,7 +20,7 @@ podTemplate(
     ],
 ) 
 
-{ timeout(time: 2, unit: 'HOURS') { 
+{ timeout(time: 2, unit: 'MINUTES') { 
     node(label){
 
         stage('Checkout SCM') {
