@@ -15,7 +15,7 @@ podTemplate(
 ) 
 
 {
-    node() {
+    node{
 
         stage('Checkout SCM') {
             echo "Git Cloned"
