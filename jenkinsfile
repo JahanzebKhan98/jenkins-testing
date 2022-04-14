@@ -1,5 +1,8 @@
 
 import groovy.json.JsonOutput
+def label = "jenkins-agent-${UUID.randomUUID().toString()}"
+def containerName = "build-container-${UUID.randomUUID().toString()}"
+
 
 podTemplate(
     label: label,
